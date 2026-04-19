@@ -14,16 +14,17 @@
 </head>
 
 <body class="bg-[#02110C] font-['Playfair_Display']">
-
     <div
         class="navbar z-[50] sticky top-0 flex justify-between items-center bg-[#05140e] px-4 md:px-10 py-4 border-b-4 border-[#808080]">
         <div class="nav-logo">
-            <img src="https://framerusercontent.com/images/pInmzyLGnaA2Y9GVrZ6o2FwcLs.png" alt="Logo"
-                class="h-8 md:h-12 cursor-pointer">
+            <a href="./index.html">
+                <img src="https://framerusercontent.com/images/pInmzyLGnaA2Y9GVrZ6o2FwcLs.png" alt="Logo"
+                    class="h-8 md:h-12 cursor-pointer">
+            </a>
         </div>
 
         <div class="nav-content flex items-center gap-3 md:gap-8 text-sm md:text-lg">
-            <a href="./menu.html"
+            <a href=""
                 class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">Menu</a>
             <a href=""
                 class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">About</a>
@@ -34,172 +35,145 @@
         </div>
     </div>
 
-    <div class="page-1 bg-[#02110C] px-6 md:px-[100px] lg:px-[170px] md:py-5 py-10 md:py-32">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+    <div class="page-1 py-10 px-5 md:px-[150px]">
+        <div class="header mb-8">
+            <h1 class="text-[#E6D8AD] text-[30px] font-bold text-center">Menyu</h1>
+        </div>
 
-            <div class="header text-center lg:text-left">
-                <p
-                    class="text-[#FFEDBF] selection:text-[#fff] selection:bg-[#FFBB00] text-[40px] md:text-[60px] lg:text-[80px] leading-tight font-bold">
-                    Zövqün və ləzzətin ünvanı
-                </p>
-            </div>
+        <div class="buttons mx-auto text-center grid grid-cols-2 sm:flex sm:justify-center gap-4 text-[#EEC34D] mb-10">
+            <button class="filter-btn hover:bg-[#000]/20 transition py-2 px-5 rounded-md border border-[#EEC34D]/20"
+                data-filter="all">Bütün Menyu</button>
+            <button class="filter-btn hover:bg-[#000]/20 transition py-2 px-5 rounded-md border border-[#EEC34D]/20"
+                data-filter="snacks">Qəlyanaltılar</button>
+            <button class="filter-btn hover:bg-[#000]/20 transition py-2 px-5 rounded-md border border-[#EEC34D]/20"
+                data-filter="main">Əsas Yeməklər</button>
+            <button class="filter-btn hover:bg-[#000]/20 transition py-2 px-5 rounded-md border border-[#EEC34D]/20"
+                data-filter="drinks">İçkilər / Şirniyyatlar</button>
+        </div>
 
-            <div class="flex flex-col items-center justify-center">
-                <div class="button">
-                    <button>
-                        <div
-                            class="flex gap-2 hover:gap-4 transition hover:scale-105 items-center text-[#FFBB00] border-[3px] md:border-[5px] border-[#FFBB00] px-4 py-2 md:px-6 md:py-3">
-                            <p class="font-bold text-[18px] md:text-[25px] whitespace-nowrap">Rezervasiya et</p>
-                            <span class="material-symbols-outlined text-[24px] md:text-[35px]">fork_spoon</span>
-                        </div>
+        <div class="menu grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="drinks">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/cakemenu.webp" alt="cake">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Şokoladlı Tort</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        İçkilər / Şirniyyatlar
                     </button>
                 </div>
+            </div>
 
-                <div
-                    class="footer flex flex-wrap justify-center gap-1 text-[14px] md:text-[18px] mt-8 text-[#fff] text-center">
-                    <span>We served over</span>
-                    <span class="text-[#FFBB00] font-bold">5000+</span>
-                    <span
-                        class="material-symbols-outlined text-[#FFBB00] text-sm md:text-base">sentiment_satisfied</span>
-                    <span>Happy Customers</span>
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="main">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/eggdish.webp" alt="egg">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Yumurta</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Əsas Yeməklər
+                    </button>
                 </div>
             </div>
 
-            <div class="flex justify-center">
-                <img class="rounded-[100px] md:rounded-[150px] hover:scale-105 transition w-full max-w-[250px] md:max-w-[350px] shadow-2xl"
-                    src="./pics/chef-serving-food-stockcake.webp" alt="Chef">
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="main">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/friedchicken.jpg" alt="chicken">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Toyuq</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Əsas Yeməklər
+                    </button>
+                </div>
             </div>
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="main">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/prawndish.jpg" alt="prawn">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Prawn</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Əsas Yeməklər
+                    </button>
+                </div>
+            </div>
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="snacks">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/yuminsoup.jpg" alt="soup">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Youmin Sup</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Qəlyanaltılar
+                    </button>
+                </div>
+            </div>
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="snacks">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/snackytacos.jpg" alt="taco">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Snacky Taco</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Qəlyanaltılar
+                    </button>
+                </div>
+            </div>
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="main">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/Spicy-chicken-rice-bowl.jpg" alt="bowl">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Toyuq Duyu Bowl</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Əsas Yeməklər
+                    </button>
+                </div>
+            </div>
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="main">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/noodle.jfif" alt="noodle">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Noodle</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        Əsas Yeməklər
+                    </button>
+                </div>
+            </div>
+
+            <div class="card relative w-full rounded-xl overflow-hidden group" data-category="drinks">
+                <img class="cursor-pointer w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    src="./pics/coollemontea.webp" alt="tea">
+                <div class="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div class="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3">
+                    <p class="text-[#FEECBE] font-bold text-lg drop-shadow-md">Sərin Limonlu Çay</p>
+                    <button
+                        class="px-3 py-1 text-[#FEECBE] bg-[#A96F02]/40 backdrop-blur-sm border border-[#A96F02]/30 rounded-sm">
+                        İçkilər / Şirniyyatlar
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="page-2 my-auto mx-auto md:grid md:grid-cols-2 py-10 md:py-[140px] px-5 md:px-20 bg-[#021510]">
-        <div class="image">
-            <img class="rounded-md hover:shadow-lg hover:shadow-[#FFBC16]/70 transition-shadow mb-5"
-                src="./pics/page2photo.avif" alt="girl">
-        </div>
-        <div class="content">
-            <div class="header">
-                <p
-                    class="uppercase text-[#fff] md:text-[30px] font-bold mb-2  selection:text-[#fff] selection:bg-[#FFBB00]">
-                    MÜŞTƏRİLƏRİMİZ NƏ DEYİR?</p>
-            </div>
-            <div class="header2">
-                <p
-                    class="text-[#FFEDBF] md:text-[25px] font-extrabold mb-2 md:mb-5  selection:text-[#fff] selection:bg-[#FFBB00]">
-                    Qüsursuz Dadın Estetikası</p>
-            </div>
-            <div class="comment flex gap-5 mb-10 mt-10">
-                <div class="img my-auto ">
-                    <img class="rounded-[50%] w-[75px] h-[55px]" src="./pics/page2photo.avif" alt="girl">
-                </div>
-                <div class="text">
-                    <p class="text-[#fff] max-w-[450px]  selection:text-[#fff] selection:bg-[#FFBB00]"> Heyranedici
-                        atmosfer və qüsursuz xidmət. Hər bir təam bir sənət əsəridir — həm göz oxşayır, həm də ləzzəti
-                        ilə valeh edir. Kulinariya mükəmməlliyi və lüks mühit axtaranlara şiddətlə tövsiyə edirəm.</p>
-                </div>
-            </div>
-            <div class="main">
-                <p class="text-[#fff] mb-2  selection:text-[#fff] selection:bg-[#FFBB00]"> Heyranedici atmosfer,
-                    qüsursuz xidmət. Hər bir təam — göz oxşayan təqdimatı və zəngin dadı ilə əsl sənət əsəridir.
-                    Dəbdəbəli mühitdə kulinariya mükəmməlliyini dadmaq istəyənlərə şiddətlə tövsiyə edirəm.</p>
-            </div>
-            <div class="footer">
-                <p class="text-[#FFEDBF] font-bold  selection:text-[#fff] selection:bg-[#FFBB00]">-- Sofia Romus</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="page3 md:hidden block px-10 py-7 ">
-        <div class="header">
-            <div class="subheader">
-                <p class="text-[#fff] text-center mb-2 text-[17px] ">MİŞLEN standartlarına uyğun eksklüziv menyu</p>
-            </div>
-            <div class="head">
-                <p class="text-[#FFEDBF] font-extrabold text-[23px] text-center">Mükəmməl dadların unudulmaz harmoniyası
-                </p>
-            </div>
-            <div class="button flex justify-center mt-5 mb-7 ">
-                <button
-                    class="px-5 py-2 rounded-md  hover:bg-[#FFD700] transition hover:text-[#000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg my-auto border-2 border-[#FFBC16] text-[#FFBC16]">Menuya
-                    Bax
-                    -></button>
-            </div>
-        </div>
-
-        <div class="main grid grid-cols-2 gap-5">
-            <img class="rounded-md hover:scale-105 transition max-h-[215px]" src="./pics/page3photo.avif" alt="egg">
-            <img class="rounded-md hover:scale-105 transition max-h-[215px]" src="./pics/page3photo2.avif"
-                alt="chicken">
-        </div>
-    </div>
-
-    <div class="page-3 hidden md:block bg-[#021611] py-5 px-40 ">
-        <div class="header">
-            <div class="subheader">
-                <p class="text-[#fff] text-center mb-3 text-[22px] ">MİŞLEN standartlarına uyğun eksklüziv menyu</p>
-            </div>
-            <div class="head">
-                <p class="text-[#FFEDBF] font-extrabold text-[33px] text-center">Mükəmməl dadların unudulmaz harmoniyası
-                </p>
-            </div>
-            <div class="button flex justify-center mt-5 mb-7 ">
-                <button
-                    class="px-5 py-2 rounded-md text-[20px] hover:bg-[#FFD700] transition hover:text-[#000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg my-auto border-2 border-[#FFBC16] text-[#FFBC16]">Menyuya
-                    bax
-                    -></button>
-            </div>
-        </div>
-
-        <div class="container mx-auto px-4 py-10">
-            <div class="flex flex-row items-center justify-center gap-4 lg:gap-6">
-
-                <div class="hidden lg:block relative group w-1/4">
-                    <img class="w-full h-[550px] object-cover rounded-lg transition duration-500 group-hover:scale-105"
-                        src="./pics/page3meal1.avif" alt="Appetizers">
-                    <div class="absolute inset-x-0 bottom-10 flex justify-center">
-                        <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-5 py-2 bg-black/40 backdrop-blur-md">
-                            Qəlyanaltılar ->
-                        </button>
-                    </div>
-                </div>
-
-                <div class="flex flex-row items-center gap-4 w-full lg:w-2/4">
-                    <div class="relative group w-1/2">
-                        <img class="w-full h-[350px] lg:h-[400px] object-cover rounded-lg transition duration-500 group-hover:scale-105"
-                            src="./pics/page3photo.avif" alt="Main Dish">
-                        <div class="absolute inset-x-0 bottom-6 flex justify-center">
-                            <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-4 py-1 text-sm bg-black/40">
-                                Əsas Yeməklər ->
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="relative group w-1/2">
-                        <img class="w-full h-[350px] lg:h-[400px] object-cover rounded-lg transition duration-500 group-hover:scale-105"
-                            src="./pics/page3photo2.avif" alt="Main Dish">
-                        <div class="absolute inset-x-0 bottom-6 flex justify-center">
-                            <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-4 py-1 text-sm bg-black/40">
-                                Əsas Yeməklər ->
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hidden lg:block relative group w-1/4">
-                    <img class="w-full h-[550px] object-cover rounded-lg transition duration-500 group-hover:scale-105"
-                        src="./pics/page3meal4.avif" alt="Beverages">
-                    <div class="absolute inset-x-0 bottom-10 flex justify-center">
-                        <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-5 py-2 bg-black/40 backdrop-blur-md">
-                            İçkilər ->
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="page-4 py-10 px-3 md:px-0 py-20 max-w-4xl mx-auto">
+    <div class="page-2 py-10 px-3 md:px-0 py-20 max-w-4xl mx-auto">
         <div class="header">
             <h3 class="text-[#FFEDBF] font-extrabold text-[35px] text-center">Masanızı rezerv edin</h3>
             <p class="text-[#B3AD6A] text-center font-bold text-[20px] mt-2">Anında masa rezervasiyası</p>
@@ -326,7 +300,6 @@
 
         </div>
     </footer>
-
 
     <script src="./index.js"></script>
 </body>
