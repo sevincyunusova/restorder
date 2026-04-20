@@ -15,3 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const carousel = document.getElementById('carousel');
+const cards = [...carousel.children];
+cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    carousel.appendChild(clone);
+});
+
+function autoScroll() {
+    const cardWidth = carousel.firstElementChild.offsetWidth + 20; 
+
+    if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+        carousel.scrollTo({ left: 0, behavior: 'instant' });
+        
+        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    } else {
+        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    }
+}
+
+let scrollInterval = setInterval(autoScroll, 2000);
+carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+carousel.addEventListener('mouseleave', () => scrollInterval = setInterval(autoScroll, 2000));
