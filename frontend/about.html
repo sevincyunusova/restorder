@@ -33,10 +33,10 @@
                 class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">Menu</a>
             <a href="./about.html"
                 class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">About</a>
-            <a class="bg-[#FFBC16] text-black px-3 py-2 md:px-4 md:py-3 font-bold rounded-lg hover:bg-[#FFD700] transition whitespace-nowrap"
-                href="">
-                Reserve Table
-            </a>
+            <button id="openModalBtn"
+                class="bg-[#FFBC16] text-black px-3 py-2 md:px-4 md:py-3 font-bold rounded-lg hover:bg-[#FFD700] transition whitespace-nowrap">
+                Reservasiya Et
+            </button>
         </div>
     </div>
 
@@ -381,6 +381,63 @@
 
         </div>
     </footer>
+
+    <div id="reservationModal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-md p-4">
+
+        <div
+            class="bg-[#021611] border border-[#D4AF37]/50 w-full max-w-2xl rounded-2xl p-6 md:p-10 relative animate-in fade-in zoom-in duration-300">
+
+            <button id="closeModal" class="absolute top-4 right-4 text-[#FFEDBF] hover:text-[#FFBC16] transition">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+
+            <div class="text-center mb-8">
+                <h3 class="text-[#FFEDBF] font-extrabold text-2xl md:text-3xl">Masanızı rezerv edin</h3>
+                <p class="text-[#B3AD6A] mt-2">Məlumatları dolduraraq yerinizi ayırın</p>
+            </div>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]/60 p-3 focus:border-[#D4AF37] outline-none"
+                    type="text" placeholder="Adınız*" required>
+                <input
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]/60 p-3 focus:border-[#D4AF37] outline-none"
+                    type="tel" placeholder="Telefon*" required>
+                <input
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]/60 p-3 focus:border-[#D4AF37] outline-none"
+                    type="email" placeholder="Email*" required>
+                <input
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none"
+                    type="date" required>
+
+                <select
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none bg-[#021611]">
+                    <option class="bg-[#021611]">Saat seçin</option>
+                    <option class="bg-[#021611]">18:00 - 19:00</option>
+                    <option class="bg-[#021611]">19:00 - 20:00</option>
+                    <option class="bg-[#021611]">20:00 - 21:00</option>
+                </select>
+
+                <select
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none bg-[#021611]">
+                    <option class="bg-[#021611]">Qonaq sayı</option>
+                    <option class="bg-[#021611]">1 nəfər</option>
+                    <option class="bg-[#021611]">2 nəfər</option>
+                    <option class="bg-[#021611]">4+ nəfər</option>
+                </select>
+
+                <textarea
+                    class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none col-span-1 md:col-span-2 h-24 resize-none"
+                    placeholder="Qeydləriniz.."></textarea>
+
+                <button type="submit"
+                    class="col-span-1 md:col-span-2 mt-4 bg-[#F5C84F] hover:bg-[#FFD700] text-black font-bold py-3 rounded-lg transition-all hover:scale-[1.02] shadow-lg shadow-[#FFBC16]/20">
+                    Rezervasiyanı Tamamla
+                </button>
+            </form>
+        </div>
+    </div>
 
     <script src="./index.js"></script>
 
