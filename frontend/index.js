@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ---  MENU FILTER ---
+
+    // --- 1. MENU FILTER  ---
     const filterButtons = document.querySelectorAll('.filter-btn');
     const menuCards = document.querySelectorAll('.card');
     
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- CAROUSEL  ---
+    // ---  CAROUSEL  ---
     const carousel = document.getElementById('carousel');
     if (carousel) {
         const cards = [...carousel.children];
@@ -39,29 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let scrollInterval = setInterval(autoScroll, 2000);
-        carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+                carousel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
         carousel.addEventListener('mouseleave', () => scrollInterval = setInterval(autoScroll, 2000));
     }
 
-    // --- RESERVATION MODAL (Popup) ---
+    // --- 3. RESERVATION  ---
     const modal = document.getElementById('reservationModal');
-    const openBtn = document.getElementById('openModalBtn');
+    const openBtns = document.querySelectorAll('.openModalBtn'); 
     const closeBtn = document.getElementById('closeModal');
 
-    if (modal && openBtn && closeBtn) {
-        openBtn.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden'; 
+    if (modal && openBtns.length > 0) {
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
         });
 
         const closeModalFunc = () => {
             modal.classList.add('hidden');
             modal.classList.remove('flex');
-            document.body.style.overflow = 'auto'; 
+            document.body.style.overflow = 'auto';
         };
 
-        closeBtn.addEventListener('click', closeModalFunc);
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModalFunc);
+        }
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModalFunc();

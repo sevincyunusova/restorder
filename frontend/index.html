@@ -26,9 +26,9 @@
             <a href="./menu.html"
                 class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">Menu</a>
             <a href="./about.html"
-                class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">About</a>
-            <button id="openModalBtn"
-                class="bg-[#FFBC16] text-black px-3 py-2 md:px-4 md:py-3 font-bold rounded-lg hover:bg-[#FFD700] transition whitespace-nowrap">
+                class="text-[#FFBC16] hidden sm:block hover:bg-black hover:p-2 rounded transition duration-300">Haqqında</a>
+            <button
+                class="openModalBtn bg-[#FFBC16] text-black px-3 py-2 md:px-4 md:py-3 font-bold rounded-lg hover:bg-[#FFD700] transition whitespace-nowrap">
                 Reservasiya Et
             </button>
         </div>
@@ -46,7 +46,7 @@
 
             <div class="flex flex-col items-center justify-center">
                 <div class="button">
-                    <button>
+                    <button class="openModalBtn">
                         <div
                             class="flex gap-2 hover:gap-4 transition hover:scale-105 items-center text-[#FFBB00] border-[3px] md:border-[5px] border-[#FFBB00] px-4 py-2 md:px-6 md:py-3">
                             <p class="font-bold text-[18px] md:text-[25px] whitespace-nowrap">Rezervasiya et</p>
@@ -158,7 +158,7 @@
                         src="./pics/page3meal1.avif" alt="Appetizers">
                     <div class="absolute inset-x-0 bottom-10 flex justify-center">
                         <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-5 py-2 bg-black/40 backdrop-blur-md">
-                            Qəlyanaltılar ->
+                            <a href="./menu.html#snacks"> Qəlyanaltılar -></a>
                         </button>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                             src="./pics/page3photo.avif" alt="Main Dish">
                         <div class="absolute inset-x-0 bottom-6 flex justify-center">
                             <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-4 py-1 text-sm bg-black/40">
-                                Əsas Yeməklər ->
+                                <a href="./menu.html#main">Əsas Yeməklər -></a>
                             </button>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                             src="./pics/page3photo2.avif" alt="Main Dish">
                         <div class="absolute inset-x-0 bottom-6 flex justify-center">
                             <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-4 py-1 text-sm bg-black/40">
-                                Əsas Yeməklər ->
+                                <a href="./menu.html#main">Əsas Yeməklər -></a>
                             </button>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                         src="./pics/page3meal4.avif" alt="Beverages">
                     <div class="absolute inset-x-0 bottom-10 flex justify-center">
                         <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-5 py-2 bg-black/40 backdrop-blur-md">
-                            İçkilər ->
+                            <a href="./menu.html#drinks">İçkilər -></a>
                         </button>
                     </div>
                 </div>
@@ -249,8 +249,7 @@
         </div>
         <div class="flex mt-5">
             <button
-                class="mx-auto px-5 py-2 rounded-sm  hover:bg-[#FFD700] transition text-[#000] bg-[#F5C84F] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg font-bold">Check
-                Menu -></button>
+                class="mx-auto px-5 py-2 rounded-sm  hover:bg-[#FFD700] transition text-[#000] bg-[#F5C84F] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg font-bold">Təsdiq Edin -></button>
         </div>
     </div>
 
