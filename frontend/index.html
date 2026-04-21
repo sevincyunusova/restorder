@@ -11,15 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-[#02110C] font-['Playfair_Display']">
-
     <div
         class="navbar z-[50] sticky top-0 flex justify-between items-center bg-[#05140e] px-4 md:px-10 py-4 border-b-4 border-[#808080]">
         <div class="nav-logo">
-            <img src="https://framerusercontent.com/images/pInmzyLGnaA2Y9GVrZ6o2FwcLs.png" alt="Logo"
-                class="h-8 md:h-12 cursor-pointer">
+            <a href="./index.html">
+                <img src="https://framerusercontent.com/images/pInmzyLGnaA2Y9GVrZ6o2FwcLs.png" alt="Logo"
+                    class="h-8 md:h-12 cursor-pointer">
+            </a>
         </div>
 
         <div class="nav-content flex items-center gap-3 md:gap-8 text-sm md:text-lg">
@@ -144,9 +150,10 @@
             </div>
             <div class="button flex justify-center mt-5 mb-7 ">
                 <button
-                    class="px-5 py-2 rounded-md text-[20px] hover:bg-[#FFD700] transition hover:text-[#000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg my-auto border-2 border-[#FFBC16] text-[#FFBC16]">Menyuya
+                    class="px-5 py-2 rounded-md text-[20px] hover:bg-[#FFD700] transition hover:text-[#000] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg my-auto border-2 border-[#FFBC16] text-[#FFBC16]">
+                <a href="./menu.html">Menyuya
                     bax
-                    -></button>
+                    -></a></button>
             </div>
         </div>
 
@@ -158,7 +165,7 @@
                         src="./pics/page3meal1.avif" alt="Appetizers">
                     <div class="absolute inset-x-0 bottom-10 flex justify-center">
                         <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-5 py-2 bg-black/40 backdrop-blur-md">
-                            <a href="./menu.html#snacks"> Qəlyanaltılar -></a>
+                            <a href="./menu.html"> Qəlyanaltılar -></a>
                         </button>
                     </div>
                 </div>
@@ -169,7 +176,7 @@
                             src="./pics/page3photo.avif" alt="Main Dish">
                         <div class="absolute inset-x-0 bottom-6 flex justify-center">
                             <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-4 py-1 text-sm bg-black/40">
-                                <a href="./menu.html#main">Əsas Yeməklər -></a>
+                                <a href="./menu.html">Əsas Yeməklər -></a>
                             </button>
                         </div>
                     </div>
@@ -179,7 +186,7 @@
                             src="./pics/page3photo2.avif" alt="Main Dish">
                         <div class="absolute inset-x-0 bottom-6 flex justify-center">
                             <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-4 py-1 text-sm bg-black/40">
-                                <a href="./menu.html#main">Əsas Yeməklər -></a>
+                                <a href="./menu.html">Əsas Yeməklər -></a>
                             </button>
                         </div>
                     </div>
@@ -190,7 +197,7 @@
                         src="./pics/page3meal4.avif" alt="Beverages">
                     <div class="absolute inset-x-0 bottom-10 flex justify-center">
                         <button class="border-2 border-[#D4AF37] text-[#FFBC16] px-5 py-2 bg-black/40 backdrop-blur-md">
-                            <a href="./menu.html#drinks">İçkilər -></a>
+                            <a href="./menu.html">İçkilər -></a>
                         </button>
                     </div>
                 </div>
@@ -213,44 +220,43 @@
             </p>
         </div>
 
-        <div class="form grid grid-cols-2 gap-5">
-            <input
+        <form id="reservationFormPage" class="form grid grid-cols-2 gap-5">
+            <input name="fullName"
                 class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none"
                 type="text" placeholder="Name*" required>
-            <input
+            <input name="phoneNumber"
                 class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]  p-3 focus:border-[#D4AF37] outline-none"
                 type="number" placeholder="Phone Number" required>
-            <input
+            <input name="email"
                 class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]  p-3 focus:border-[#D4AF37] outline-none"
                 type="email" placeholder="Email*" required>
-            <input
+            <input name="reservationDate"
                 class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]  p-3 focus:border-[#D4AF37] outline-none"
                 type="date" placeholder="Date*" required>
-            <select
-                class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none">
-                <option class="text-[#FFEDBF] bg-[#021611]">— Time — *</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">9:00 - 10:00PM</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">10:00 - 11:00PM</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">11:00 - 12:00PM</option>
+            <select name="reservationTime"
+                class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none bg-[#021611]">
+                <option value="">— Time — *</option>
+                <option value="9:00 - 10:00PM">9:00 - 10:00PM</option>
+                <option value="10:00 - 11:00PM">10:00 - 11:00PM</option>
+                <option value="11:00 - 12:00PM">11:00 - 12:00PM</option>
             </select>
 
-            <select
-                class="bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none">
-                <option class="text-[#FFEDBF] bg-[#021611]" class="text-[#FFEDBF] bg-[#021611] ">No. of seats*</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">1 seats*</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">2 seats</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">3 seats</option>
-                <option class="text-[#FFEDBF] bg-[#021611]">4 seats</option>
+            <select name="seatsCount"
+                class="bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none bg-[#021611]">
+                <option value="0">No. of seats*</option>
+                <option value="1">1 seats*</option>
+                <option value="2">2 seats</option>
+                <option value="3">3 seats</option>
+                <option value="4">4 seats</option>
             </select>
-            <textarea
+            <textarea name="message"
                 class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] font-bold p-3 focus:border-[#D4AF37] outline-none col-span-2 w-full resize-none">Message..</textarea>
-
-
-        </div>
-        <div class="flex mt-5">
-            <button
-                class="mx-auto px-5 py-2 rounded-sm  hover:bg-[#FFD700] transition text-[#000] bg-[#F5C84F] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg font-bold">Təsdiq Edin -></button>
-        </div>
+            
+            <div class="flex mt-5 col-span-2">
+                <button type="submit"
+                    class="mx-auto px-5 py-2 rounded-sm  hover:bg-[#FFD700] transition text-[#000] bg-[#F5C84F] hover:scale-105 hover:shadow-[0_0_20px_rgba(255,188,22,0.4)] hover:rounded-lg font-bold">Təsdiq Edin -></button>
+            </div>
+        </form>
     </div>
 
 
@@ -285,11 +291,11 @@
                 <div class="pages-section">
                     <h5 class="text-[#FFEDBF] font-extrabold text-[24px] md:text-[30px] mb-5">Səhifələr</h5>
                     <nav class="flex flex-col gap-3 font-bold text-[18px]">
-                        <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition" href="#">Ana
+                        <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition" href="./index.html">Ana
                             Səhifə</a>
-                        <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition" href="#">Menyu</a>
+                        <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition" href="./menu.html">Menyu</a>
                         <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition"
-                            href="#">Haqqımızda</a>
+                            href="./about.html">Haqqımızda</a>
                         <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition" href="#">Bizi
                             Tapın</a>
                         <a class="text-[#D1D1D1] hover:text-[#F5C333] hover:underline transition"
@@ -342,37 +348,37 @@
                 <p class="text-[#B3AD6A] mt-2">Məlumatları dolduraraq yerinizi ayırın</p>
             </div>
 
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
+            <form id="reservationFormModal" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input name="fullName"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]/60 p-3 focus:border-[#D4AF37] outline-none"
                     type="text" placeholder="Adınız*" required>
-                <input
+                <input name="phoneNumber"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]/60 p-3 focus:border-[#D4AF37] outline-none"
                     type="tel" placeholder="Telefon*" required>
-                <input
+                <input name="email"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] placeholder:text-[#FFEDBF]/60 p-3 focus:border-[#D4AF37] outline-none"
                     type="email" placeholder="Email*" required>
-                <input
+                <input name="reservationDate"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none"
                     type="date" required>
 
-                <select
+                <select name="reservationTime"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none bg-[#021611]">
-                    <option class="bg-[#021611]">Saat seçin</option>
-                    <option class="bg-[#021611]">18:00 - 19:00</option>
-                    <option class="bg-[#021611]">19:00 - 20:00</option>
-                    <option class="bg-[#021611]">20:00 - 21:00</option>
+                    <option value="">Saat seçin</option>
+                    <option value="18:00 - 19:00">18:00 - 19:00</option>
+                    <option value="19:00 - 20:00">19:00 - 20:00</option>
+                    <option value="20:00 - 21:00">20:00 - 21:00</option>
                 </select>
 
-                <select
+                <select name="seatsCount"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none bg-[#021611]">
-                    <option class="bg-[#021611]">Qonaq sayı</option>
-                    <option class="bg-[#021611]">1 nəfər</option>
-                    <option class="bg-[#021611]">2 nəfər</option>
-                    <option class="bg-[#021611]">4+ nəfər</option>
+                    <option value="0">Qonaq sayı</option>
+                    <option value="1">1 nəfər</option>
+                    <option value="2">2 nəfər</option>
+                    <option value="4">4+ nəfər</option>
                 </select>
 
-                <textarea
+                <textarea name="message"
                     class="rounded-md bg-transparent border border-[#D4AF37]/40 text-[#FFEDBF] p-3 focus:border-[#D4AF37] outline-none col-span-1 md:col-span-2 h-24 resize-none"
                     placeholder="Qeydləriniz.."></textarea>
 
