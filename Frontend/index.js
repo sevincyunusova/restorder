@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeResBtn = document.getElementById('closeModal');
     const foodCards = document.querySelectorAll('.card[data-name]');
 
-    // Səhifədə yemək kartları varsa işləsin (Digər htmllərdə çökməsin deyə)
     if (foodCards.length > 0) {
         foodCards.forEach(card => {
             card.addEventListener('click', function() {
@@ -84,11 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // FORM DATA GÖNDƏRMƏ HİSSƏSİ (Backendinə tam uyğunlaşdırıldı)
     const handleFormSubmit = async (formElement) => {
         const formData = new FormData(formElement);
         
-        // Backenddəki C# modelinin adları ilə bire-bir eyni edildi
         const reservationData = {
             fullName: formData.get('fullName'),
             email: formData.get('email'),
@@ -100,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            // Sənin yeni backend portun (5126) və endpointin (api/Reservation) yazıldı
             const response = await fetch('http://localhost:5126/api/Reservation', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -154,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const openImageBtn = document.getElementById('openImageBtn');
     const closeImageModal = document.getElementById('closeImageModal');
 
-    // BURADA BURAXILAN MÖTƏRİZƏ SƏHVİ DÜZƏLDİLDİ (}); əlavə olundu)
     if (openImageBtn && imageModal) {
         openImageBtn.addEventListener('click', () => {
             imageModal.classList.remove('hidden');
